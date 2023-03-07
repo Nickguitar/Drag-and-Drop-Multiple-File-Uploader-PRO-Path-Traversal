@@ -1,7 +1,7 @@
-# Drag and Drop Multiple File Uploader PRO - Contact Form 7 v5.0.6.1 Path Traversal
+# CVE-2023-1112 - Drag and Drop Multiple File Uploader PRO - Contact Form 7 v5.0.6.1 Path Traversal
 
 # Info
-Path Traversal in Drag and Drop Multiple File Uploader PRO - Contact Form 7 version 5.0.6.1 allows unauthenticated remote attacker to upload files anywhere writable on the remote server.
+Path Traversal in Drag and Drop Multiple File Uploader PRO - Contact Form 7 version 5.0.6.1 allows unauthenticated remote attacker to upload files anywhere writable on the remote server (CVE-2023-1112).
 
 To exploit this vulnerability, the attacker needs to upload a file using the plugin's form. On this post request there needs to be the parameter `upload_name`, which value is the name of the folder to which the file will be uploaded. The attacker can put anything he wants, such as `../`, `../../../`, `foldername` (it will create the folder "foldername" on the upload directory), etc.
 
